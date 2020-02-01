@@ -27,5 +27,5 @@ deploy:
   on:
     branch: master
     # Keys are setup in TravisCI as env variables
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
