@@ -1,0 +1,13 @@
+sudo: required
+language: generic
+services:
+  - docker
+
+# Setup steps
+before_install:
+  - docker build -t spa/docker-react -f Dockerfile.dev .
+
+# Commands to be executed
+script:
+  # CI flag allows it to exit when test finishes. used to be -- --coverage
+  - docker run -e CI=true spa/docker-react npm run test
